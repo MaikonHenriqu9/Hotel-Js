@@ -296,9 +296,6 @@ Resposta do usuário =>  95
 Programa pergunta   =>  "Qual a quantidade de aparelhos?"
 Resposta do usuário =>  6
 Programa pergunta   =>  "Qual a porcentagem de desconto?" 
-
-Link da atividade:
-https://docs.google.com/forms/d/1MTBaCWIpEUlbBpEioDo11J2YouC02JhtkOrMvtWwam0/viewform?edit_requested=true
 Resposta do usuário =>  9
 Programa pergunta   =>  "Qual o número mínino de aparelhos para conseguir o desconto?"
 Resposta do usuário =>  10
@@ -307,3 +304,6 @@ Programa exibe          =>  "O serviço de Empresa 2 custará R$1480.0"
 Programa pergunta   =>  "Deseja informar novos dados, {Nome}? (S/N)"
 Resposta do usuário =>  N
 Programa exibe          =>  "O orçamento de menor valor é o [Empresa 1 por R$ 1200.0]"
+
+Link da atividade:
+https://docs.google.com/forms/d/1MTBaCWIpEUlbBpEioDo11J2YouC02JhtkOrMvtWwam0/viewform?edit_requested=true
