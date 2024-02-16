@@ -1,4 +1,5 @@
 var hotel, nome, senha;
+var nomesHospedes = [];
 
 /* Função responsável pelo nome do hotel */
 const nomeHotel = () => {
@@ -214,12 +215,63 @@ const cadastrarPesquisar = () => {
 
     switch(opcao){
         case 1:
+            cadastroHospede();
         case 2:
         case 3:
             inicioMenu();
+            break;
         default:
             erro();
     }
+}
+
+const cadastroHospede = () => {
+    nomesHospedes = [];
+    let hospede;
+    let cont = 1;
+    let resposta;
+    verificacao = true;
+
+    alert(`Cadastro dos Hospedes`);
+    alert(`Aviso`);
+    alert(`Só é possível cadastrar 15 pessoas`);
+
+      do{
+        hospede = prompt(`Informe o nome do ${cont}° hospede`);
+        nomesHospedes.push(hospede);
+
+        if(nomesHospedes.length > 14){
+            alert(`Você atingiu o número máximo de cadastros`);
+            break;
+        } else {
+
+            // Verifica se o usuário cancelou a entrada do nome
+            if(hospede === ''){
+                alert(`Informe o nome do hospede`);
+                continue;
+            }
+
+            // Caso o usuário não tenha informado nada
+            if(hospede === null){
+                break;
+            }
+
+            resposta = prompt(`Deseja informar mais algum nome?`);
+
+            // Verifica se irá ou não continuar informando o nome dos hospedes
+            if(resposta.toLocaleLowerCase() === 'sim'){
+                cont++;
+                continue;
+            } else if (resposta.toLowerCase() === 'não' || resposta.toLowerCase() === 'nao'){
+                break;
+            } else {
+                alert(`Resposta Inválida`);
+            }
+        }
+
+      } while (verificacao);
+        
+    cadastrarPesquisar();
 }
 
 nomeHotel(); 
